@@ -192,6 +192,21 @@ a {
     list-style: none;
 }
 
+.experience-item {
+    margin-top: 20px;
+    border-bottom: white 1px solid;
+    padding-bottom: 20px;
+
+    & li {
+        list-style: initial;
+    }
+}
+
+.experience-item:last-child {
+    padding-bottom: 0;
+    border: none;
+}
+
 .contact > :nth-child(2) {
     padding-inline-start: 40px;
 }

@@ -3,10 +3,10 @@
 :root {
     --text-color: rgb(255, 255, 255);
     --blue-gradient: linear-gradient(290.7deg, rgb(133, 255, 159) 2.3%, rgb(0, 172, 249) 100.2%);
-    --background-color: rgb(54, 54, 54);
     --font-size-base: 24px;
     --line-height: 1.6;
     --letter-spacing: 1px;
+    --glowing-text-shadow: 0px 0px 4px rgba(255, 255, 255, 0.5);
 
 }
 
@@ -23,21 +23,21 @@
 h1 {
     font-size: calc(var(--font-size-base) * 2);
     font-weight: 400;
-    text-shadow: 0px 0px 5px rgba(255, 255, 255, 0.5);
+    text-shadow: var(--glowing-text-shadow)
 }
 
 h2 {
     font-size: calc(var(--font-size-base) * 1.5);
     font-weight: 400;
     letter-spacing: 5px;
-    text-shadow: 0px 0px 5px rgba(255, 255, 255, 0.5);
+    text-shadow: var(--glowing-text-shadow)
 }
 
 h3 {
     margin: 0;
     font-size: calc(var(--font-size-base) * 1.20);
     font-weight: 400;
-    text-shadow: 0px 0px 5px rgba(255, 255, 255, 0.5);
+    text-shadow: var(--glowing-text-shadow)
 }
 
 strong, em {
@@ -52,7 +52,7 @@ body {
     grid-template-columns: 1fr;
 
     background: #222025;
-    background: linear-gradient(130deg, #000000, #4D4855);
+    background: linear-gradient(130deg, #000000, #302d35);
 
     font-weight: 250;
 
@@ -79,7 +79,6 @@ main {
     grid-row: 2/3;
 
     margin: 2% 2% 5% 2%;
-
 
     display: flex;
     flex-direction: column;
@@ -207,6 +206,18 @@ a {
     border: none;
 }
 
-.contact > :nth-child(2) {
+.contact > :nth-child(n + 2) {
     padding-inline-start: 40px;
 }
+
+.zoom-wrapper {
+    transition: transform 0.3s ease;
+  }
+  
+  .zoom-in {
+    transform: scale(1.1); /* Zoom in */
+  }
+  
+  .zoom-out {
+    transform: scale(0.9); /* Zoom out */
+  }

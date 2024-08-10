@@ -14,7 +14,7 @@
 .footer i {
   height: 36px;
   width: 36px;
-  border: 1px solid var(--text-color);
+  border: 2px solid var(--text-color);
   border-radius: 10px;
   display: flex;
   justify-content: center;

@@ -1,0 +1,89 @@
+main {
+  grid-row: 2/3;
+  margin: 2% 2% 5% 2%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.profile img {
+  width: 15em;
+  height: fit-content;
+  border-radius: 20px;
+}
+
+.profile__summary {
+  display: flex;
+  gap: 20px;
+}
+
+.profile__summary p {
+  text-align: left;
+}
+
+.profile__links {
+  display: block;
+  margin-top: 10px;
+  display: flex;
+  list-style-type: none;
+  gap: 5em;
+}
+
+.profile__links i {
+  height: 36px;
+  width: 36px;
+  border: 1px solid var(--text-color);
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  box-shadow: 0px 2px 4px rgba(255, 255, 255, 0.2);
+
+  transition-duration: 0.2s;
+}
+
+.profile__links i:hover {
+  box-shadow: 0px 4px 8px rgba(255, 255, 255, 0.5);
+  transform: scale(1.2, 1.2);
+  transition-duration: 0.2s;
+}
+
+.glowing-green {
+  background:  var(--blue-gradient);
+  text-shadow: 0px 0px 5px rgba(255, 255, 255, 0.5);
+
+
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent; 
+  -moz-background-clip: text;
+  -moz-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.experiences > h2 {
+  padding-top: 20px;
+}
+
+.experiences li {
+  list-style: none;
+}
+
+.experience-item {
+  margin-top: 20px;
+  border-bottom: white 1px solid;
+  padding-bottom: 20px;
+
+  & li {
+      list-style: initial;
+  }
+}
+
+.experience-item:last-child {
+  padding-bottom: 0;
+  border: none;
+}
+
+.contact > :nth-child(n + 2) {
+  padding-inline-start: 40px;
+}

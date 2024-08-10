@@ -1,0 +1,32 @@
+.footer {
+  height: 50px;
+  display: flex;
+  justify-content: flex-end;
+  margin-right: 20px;
+}
+
+.footer a {
+  display: flex;
+  gap: 10px;
+}
+
+
+.footer i {
+  height: 36px;
+  width: 36px;
+  border: 1px solid var(--text-color);
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+
+  box-shadow: 0px 2px 4px rgba(255, 255, 255, 0.2);
+
+  transition-duration: 0.2s;
+}
+
+.footer i:hover {
+  box-shadow: 0px 4px 8px rgba(255, 255, 255, 0.5);
+  transform: scale(1.2, 1.2);
+  transition-duration: 0.2s;
+}

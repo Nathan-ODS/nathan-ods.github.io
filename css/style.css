@@ -63,17 +63,10 @@ body {
     grid-template-columns: 1fr;
 
     font-weight: 400;
-
-    animation: fadeIn 0.5s ease-out;
 }
 
 a {
     text-decoration: none;
-}
-
-@keyframes fadeIn {
-    from { opacity: 0; }
-    to  { opacity: 1; }
 }
 
 .zoom-wrapper {
@@ -87,3 +80,20 @@ a {
   .zoom-out {
     transform: scale(0.9); /* Zoom out */
   }
+
+@keyframes fadeInUp {
+from {
+    transform: translateY(20px);
+    opacity: 0;
+}
+
+to {
+    transform: translateY(0);
+    opacity: 1;
+}
+}
+
+article {
+    opacity: 0;
+    animation: fadeInUp 1s forwards;
+}

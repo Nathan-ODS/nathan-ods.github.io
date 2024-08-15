@@ -1,0 +1,99 @@
+@import url('./main.css');
+@import url('./footer.css');
+
+:root {
+    --text-color: rgb(0, 0, 0);
+    --blue-gradient: linear-gradient(290.7deg, rgb(79, 150, 94) 2.3%, rgb(0, 73, 107) 100.2%);
+    --font-size-base: 26px;
+    --line-height: 1.6;
+    --letter-spacing: 1px;
+    --glowing-text-shadow: 0px 0px 4px rgba(0, 0, 0, 0.5);
+}
+
+* {
+    box-sizing: border-box;
+    color: var(--text-color);
+    font-size: var(--font-size-base);
+    line-height: var(--line-height);
+    font-family: ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,Noto Sans,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji;
+
+    scroll-behavior: smooth;
+}
+
+.glowing-green {
+    background:  var(--blue-gradient);
+    text-shadow: 0px 0px 5px rgba(0, 126, 78, 0.377);
+  
+  
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent; 
+    -moz-background-clip: text;
+    -moz-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+h1 {
+    font-size: calc(var(--font-size-base) * 2);
+    font-weight: 600;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+h2 {
+    font-size: calc(var(--font-size-base) * 1.5);
+    font-weight: 500;
+}
+
+h3 {
+    margin: 0;
+    font-size: calc(var(--font-size-base) * 1.20);
+    font-weight: 400;
+}
+
+strong {
+    font-size: inherit;
+    font-weight: 700;
+    font-family:monospace
+}
+
+body {
+    min-height: 100vh;
+    margin: 0;
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    grid-template-columns: 1fr;
+
+    font-weight: 400;
+}
+
+a {
+    text-decoration: none;
+}
+
+.zoom-wrapper {
+    transition: transform 0.3s ease;
+  }
+  
+  .zoom-in {
+    transform: scale(1.1); /* Zoom in */
+  }
+  
+  .zoom-out {
+    transform: scale(0.9); /* Zoom out */
+  }
+
+@keyframes fadeInUp {
+from {
+    transform: translateY(20px);
+    opacity: 0;
+}
+
+to {
+    transform: translateY(0);
+    opacity: 1;
+}
+}
+
+article {
+    opacity: 0;
+    animation: fadeInUp 1s forwards;
+}
